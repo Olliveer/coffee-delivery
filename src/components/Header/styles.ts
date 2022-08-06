@@ -6,6 +6,10 @@ export const HeaderContainer = styled.header`
   margin: 0 10rem;
 
   padding: 2rem 0;
+
+  @media (max-width: 700px) {
+    margin: 0 1rem;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -38,6 +42,7 @@ export const Cart = styled.button`
   padding: 0.5rem;
   border-radius: 6px;
   background: ${(props) => props.theme['yellow-light']};
+  cursor: pointer;
 
   svg {
     color: ${(props) => props.theme['yellow-dark']};
