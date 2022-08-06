@@ -10,7 +10,7 @@ export const IntroContainer = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 3.5rem;
-  padding: 5.875rem 0 6.75rem 0;
+  padding: 5.875rem 10rem;
 
   background-image: url(${imageIntro});
 `;
@@ -42,7 +42,8 @@ export const SubTitle = styled.h3`
 export const ItemsIntro = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 1.25rem;
   margin-top: 4.125rem;
 
   div {
@@ -76,4 +77,26 @@ export const Item = styled.span<ItemsProps>`
   svg {
     color: ${(props) => props.theme.white};
   }
+`;
+
+export const CoffeListContainer = styled.div`
+  padding: 2rem 10rem;
+
+  h1 {
+    font-size: 2rem;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    line-height: 1.3;
+
+    margin-bottom: 2.125rem;
+
+    color: ${(props) => props.theme['base-subtitle']};
+  }
+`;
+
+export const CoffeList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2.5rem;
+  column-gap: 2rem;
 `;

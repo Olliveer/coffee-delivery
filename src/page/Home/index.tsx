@@ -1,5 +1,7 @@
 import { ShoppingCart } from 'phosphor-react';
 import {
+  CoffeList,
+  CoffeListContainer,
   HomeContainer,
   IntroContainer,
   Item,
@@ -10,6 +12,30 @@ import {
 } from './styles';
 
 import CoffeeIntro from '../../assets/coffee-intro.svg';
+import { CoffeeCard } from './components/CoffeeCard';
+
+const Coffees = [
+  {
+    id: 1,
+    img: {
+      url: '',
+      title: '',
+    },
+    type: 'tradicional',
+    description: 'O tradicional café feito com água quente e grãos moídos',
+    price: '9,90',
+  },
+  {
+    id: 2,
+    img: {
+      url: '',
+      title: '',
+    },
+    type: 'tradicional',
+    description: 'O tradicional café feito com água quente e grãos moídos',
+    price: '9,90',
+  },
+];
 
 export function Home() {
   return (
@@ -32,25 +58,33 @@ export function Home() {
               <Item itemColor="baseText">
                 <ShoppingCart size={32} weight="fill" />
               </Item>
-              Compra simples e segura
+              Embalagem mantém o café intacto
             </div>
             <div>
               <Item itemColor="yellow">
                 <ShoppingCart size={32} weight="fill" />
               </Item>
-              Compra simples e segura
+              Entrega rápida e rastreada
             </div>
             <div>
               <Item itemColor="purple">
                 <ShoppingCart size={32} weight="fill" />
               </Item>
-              Compra simples e segura
+              O café chega fresquinho até você
             </div>
           </ItemsIntro>
         </TextSection>
 
         <img src={CoffeeIntro} alt="" />
       </IntroContainer>
+
+      <CoffeListContainer>
+        <h1>Nossos cafés</h1>
+
+        <CoffeList>
+          <CoffeeCard />
+        </CoffeList>
+      </CoffeListContainer>
     </HomeContainer>
   );
 }
