@@ -7,6 +7,8 @@ export const HeaderContainer = styled.header`
 
   padding: 2rem 0;
 
+  transition: all 0.5s;
+
   @media (max-width: 700px) {
     margin: 0 1rem;
   }

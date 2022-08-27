@@ -24,4 +24,10 @@ body, input, textarea, button {
   font-size: 1rem;
   line-height: 1.3;
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  } 
+}
 `;

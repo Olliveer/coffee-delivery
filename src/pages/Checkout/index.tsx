@@ -5,17 +5,20 @@ import {
   MapPinLine,
   Money,
 } from 'phosphor-react';
+import { CoffeeCard } from './components/CoffeeCard';
 import {
   Address,
   AddressContainer,
   AddressInput,
   CartCheckout,
+  CartContainer,
   CheckoutContainer,
   CityUfContainer,
   NumberComplementContainer,
   PaymentContainer,
   Payments,
   PostalCode,
+  PriceContainer,
 } from './styles';
 
 export function Checkout() {
@@ -79,6 +82,34 @@ export function Checkout() {
 
       <CartCheckout>
         <h1>selecionados</h1>
+
+        <CartContainer>
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <PriceContainer>
+            <ul>
+              <li>
+                <span>Total de itens</span>
+                <span>R$ 29,70</span>
+              </li>
+              <li>
+                <span>Entrega</span>
+                <span>R$ 3,50</span>
+              </li>
+              <li>
+                <strong>Total</strong>
+                <strong>R$ 3,50</strong>
+              </li>
+            </ul>
+          </PriceContainer>
+          <button type="button">Confirmar pedido</button>
+        </CartContainer>
       </CartCheckout>
     </CheckoutContainer>
   );

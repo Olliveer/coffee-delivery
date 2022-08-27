@@ -7,10 +7,12 @@ export const CheckoutContainer = styled.div`
   gap: 2rem;
   margin-top: 2.5rem;
 
-  padding: 0 10rem;
+  padding: 0 10rem 10rem;
+
+  transition: all 0.5s;
 
   @media (max-width: 700px) {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
 
     grid-template-columns: 1fr;
   }
@@ -65,17 +67,6 @@ export const Address = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-`;
-
-export const CartCheckout = styled.div`
-  h1 {
-    font-size: 1.125rem;
-    font-weight: 700;
-    font-family: 'Baloo 2', sans-serif;
-    margin-bottom: 0.938rem;
-
-    color: ${(props) => props.theme['base-subtitle']};
   }
 `;
 
@@ -178,5 +169,67 @@ export const Payments = styled.div`
     > span {
       text-align: center;
     }
+  }
+`;
+
+export const CartCheckout = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.75rem;
+
+  width: 100%;
+
+  > h1 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: 'Baloo 2', sans-serif;
+    margin-bottom: 0.938rem;
+
+    color: ${(props) => props.theme['base-subtitle']};
+  }
+`;
+
+export const CartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  background: ${(props) => props.theme['base-card']};
+  border-radius: 6px;
+
+  > header {
+    flex: 1;
+    align-items: flex-start;
+  }
+
+  > button {
+    border-radius: 6px;
+    border: 0;
+    width: 100%;
+    height: 2.875rem;
+    margin-top: 1.5rem;
+    background: ${(props) => props.theme['yellow']};
+
+    color: ${(props) => props.theme['white']};
+    font-size: 0.875rem;
+    font-stretch: 100;
+    line-height: 1.6;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+`;
+
+export const PriceContainer = styled.div`
+  width: 100%;
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
   }
 `;

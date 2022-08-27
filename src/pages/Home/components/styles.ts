@@ -5,7 +5,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 1.5rem 1.5rem;
-  width: 16rem;
+  min-width: 16rem;
 
   background: ${(props) => props.theme['base-card']};
   width: 16rem;
@@ -77,6 +77,8 @@ export const ButtonsAddContainer = styled.div`
   padding: 0.75rem 0.5rem;
   gap: 0.25rem;
   border-radius: 6px;
+
+  max-height: 2rem;
 
   background: ${(props) => props.theme['base-button']};
 
